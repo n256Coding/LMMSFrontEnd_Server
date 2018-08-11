@@ -1,6 +1,7 @@
 package com.n256coding.frontend.Services;
 
 import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
 import com.n256coding.frontend.Models.User;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -13,9 +14,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 public class MongoUserDetailsService implements UserDetailsService {
 
     private MongoOperations mongoOperations;
+    private MongoClientURI uri = new MongoClientURI("mongodb+srv://moodle:QDuCgZhqbo2QV8Ps@lmmsproject-r8wzc.mongodb.net/test?retryWrites=true");
 
     public MongoUserDetailsService() {
-        mongoOperations = new MongoTemplate(new MongoClient("127.0.0.1", 27017), "ResourceDB");
+        mongoOperations = new MongoTemplate(new MongoClient(this.uri), "ResourceDB");
     }
 
     @Override

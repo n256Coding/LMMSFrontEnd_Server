@@ -17,7 +17,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/text-request",
-                        "/text-response",
+                        "/text-responce",
                         "/video",
                         "/video/processing",
                         "/moodle",

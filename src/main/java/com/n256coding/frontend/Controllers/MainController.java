@@ -18,7 +18,7 @@ public class MainController {
     }
 
     @GetMapping({"/text-request",
-            "/text-response",
+            "/text-responce",
             "/video",
             "/video/processing",
             "/moodle",
@@ -29,7 +29,9 @@ public class MainController {
             "/adminTemplate",
             "/home",
             "/loginPage",
-            "/register"})
+            "/register",
+            "/contact",
+            "/about"})
     public String loadIndexPage() {
         return "index";
     }

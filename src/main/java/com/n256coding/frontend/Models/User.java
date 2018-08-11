@@ -12,6 +12,7 @@ public class User {
     private String _id;
     private String userName;
     private String password;
+    private String email;
     private String firstName;
     private String lastName;
     private List<String> userRoles;
@@ -19,7 +20,7 @@ public class User {
     private String university;
 
     @PersistenceConstructor
-    public User(String _id, String userName, String password, String firstName, String lastName, List<String> userRoles, List<String> subjects, String university) {
+    public User(String _id, String userName, String password, String firstName, String lastName, List<String> userRoles, List<String> subjects, String university, String email) {
         this._id = _id;
         this.userName = userName;
         this.password = password;
@@ -28,6 +29,7 @@ public class User {
         this.userRoles = userRoles;
         this.subjects = subjects;
         this.university = university;
+        this.email = email;
     }
 
     public String get_id() {
@@ -92,5 +94,13 @@ public class User {
 
     public void setUniversity(String university) {
         this.university = university;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
