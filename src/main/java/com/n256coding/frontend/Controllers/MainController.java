@@ -19,6 +19,7 @@ public class MainController {
 
     @GetMapping({"/text-request",
             "/text-responce",
+            "/text-input",
             "/video",
             "/video/processing",
             "/moodle",

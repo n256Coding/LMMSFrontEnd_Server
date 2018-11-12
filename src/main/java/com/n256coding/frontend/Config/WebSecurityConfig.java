@@ -22,12 +22,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/video/processing",
                         "/moodle",
                         "/moodle-result",
+                        "/moodle-quiz-results",
                         "/slide",
                         "/report",
                         "/customReportSlide")
 //                    .hasAnyAuthority("USER", "ADMIN")
                 .authenticated()
-                .antMatchers("/adminTemplate")
+                .antMatchers("/adminTemplate", "/text-input")
                     .hasAnyAuthority("ADMIN")
                 .anyRequest().permitAll()
                 .and()
